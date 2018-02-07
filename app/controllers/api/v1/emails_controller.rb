@@ -20,6 +20,7 @@ module Api
         @email = Email.find(params[:id])
         @email.counter = @email.counter + 1
         @email.save
+        render json: @email, status: 201
       end
 
       def destroy

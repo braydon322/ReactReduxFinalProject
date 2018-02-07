@@ -47,7 +47,7 @@ export function updateEmail(email){
     }).then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(function(response){
-      return dispatch({type: 'UPDATE_EMAILS', emails: response})
+      return dispatch({type: 'UPDATE_EMAILS', email: response})
     });
   }
 }

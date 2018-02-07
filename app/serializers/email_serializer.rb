@@ -1,3 +1,3 @@
 class EmailSerializer < ActiveModel::Serializer
-  attributes :email, :counter
+  attributes :email, :counter, :id
 end

@@ -18,7 +18,11 @@ export function emailReducer(state = {
       return Object.assign({...state}, {emails: action.emails})
 
     case 'UPDATE_EMAILS':
-      return Object.assign({...state}, {emails: action.emails})
+    return {
+      ...state,
+      emails: state.emails.map(email => email.id === action.email.id ?
+          { ...email, counter: action.email.counter } :
+          email )};
 
     default:
       return state;
